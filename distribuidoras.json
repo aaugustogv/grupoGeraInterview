@@ -1,0 +1,78 @@
+{
+  "distribuidoras": [
+    {
+      "distribuidora": "Enel",
+      "endereco": "Quadra 11, SP",
+      "nome": "Unidade 1",
+      "numero": "191491",
+      "id": 1
+    },
+    {
+      "distribuidora": "Darknn",
+      "endereco": "Quadra 445, AL",
+      "nome": "Unidade 2",
+      "numero": "984951",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "endereco": "Quadra 77, PB",
+      "distribuidora": "MagaLu",
+      "nome": "Unidade 3",
+      "numero": "9814987",
+      "faturas": [
+        {
+          "data_de_vencimento": "05/11/1998",
+          "consumo": 112,
+          "valor": 550,
+          "unidadeConsumidoraId": 3
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "endereco": "Quadra 001, SE",
+      "distribuidora": "Enel",
+      "nome": "Unidade 4",
+      "numero": "91495184",
+      "faturas": [
+        {
+          "data_de_vencimento": "02/10/2001",
+          "consumo": 112,
+          "valor": 550,
+          "unidadeConsumidoraId": 4
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "endereco": "Quadra 210, RJ",
+      "distribuidora": "Havan",
+      "nome": "Unidade 5",
+      "numero": "91988",
+      "faturas": [
+        {
+          "data_de_vencimento": "12/01/1998",
+          "consumo": 112,
+          "valor": 550,
+          "unidadeConsumidoraId": 5
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "endereco": "Quadra 899, AM",
+      "distribuidora": "Light",
+      "nome": "Unidade 6",
+      "numero": "8512552",
+      "faturas": [
+        {
+          "data_de_vencimento": "08/12/1998",
+          "consumo": 112,
+          "valor": 550,
+          "unidadeConsumidoraId": 6
+        }
+      ]
+    }
+  ]
+}
