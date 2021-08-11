@@ -6,31 +6,42 @@
         <h2 class="cadastro">Cadastrar Distribuidora</h2>
         <form>
             <p>
-                Distribuidora: <input 
+                Distribuidora: 
+                <input 
                 type="text" 
                 name="distribuidora" 
                 [(ngModel)]="distribuidora.distribuidora"
-                required>
+                required
+                >
             </p>
-            <p>Endereço: <input 
+            <p>
+                Endereço: 
+                <input 
                 type="text" 
                 name="endereco" 
                 [(ngModel)]="distribuidora.endereco"
-                required>
+                required
+                >
             </p>
-            <p>Nome: <input 
+            <p>
+                Nome: 
+                <input 
                 type="text" 
                 name="nome" 
                 [(ngModel)]="distribuidora.nome"
-                required>
+                required
+                >
             </p>
-            <p>Número: <input 
+            <p>
+                Número: 
+                <input 
                 type="text" 
                 name="numero" 
                 [(ngModel)]="distribuidora.numero"
-                required>
+                required
+                >
             </p>
-            <button type="button" (click)="cadastrar()">Cadastrar</button>
+            <button type="button" (click)="openCadastrar(contentCadastrar)">Cadastrar</button>
         </form>
         
         <table class="tableDist">
@@ -58,9 +69,19 @@
                     </td>
                     <td data-label="#">
                         <div class="crud">
-                            <button class="btn btn-info" (click)="openAtualizar(contentAtualizar)">Atualizar</button>
-                            <!--<button (click)="atualizar(distribuidora.id)">Atualizar</button>-->
-                            <button class="btn btn-light" (click)="remover(distribuidora.id)">Remover</button>
+                            <button 
+                                class="btn btn-info" 
+                                (click)="openAtualizar(contentAtualizar)"
+                                >
+                                Atualizar
+                            </button>
+
+                            <button 
+                                class="btn btn-light" 
+                                (click)="remover(distribuidora.id)"
+                                >
+                                Remover
+                            </button>
                         </div>
                     </td>
                 </tr>
@@ -68,10 +89,90 @@
         </table>
     </div>
 
+    <!-- MODAL CADASTRAR -->
+    <ng-template #contentCadastrar let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Cadastrar Distribuidora</h4>
+          <button type="button" class=" btn btn-outline-danger close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+                <label 
+                    for="exampleInputEmail1" 
+                    class="form-label"
+                    >
+                    Distribuidora
+                </label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="exampleInputEmail1"
+                    >
+              </div>
+
+              <div class="mb-3">
+                <label 
+                    for="exampleInputPassword1" 
+                    class="form-label"
+                    >
+                    Endereço
+                </label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="exampleInputPassword1"
+                    >
+              </div>
+
+              <div class="mb-3">
+                <label 
+                    for="exampleInputPassword1" 
+                    class="form-label"
+                    >
+                    Nome
+                </label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="exampleInputPassword1"
+                    >
+              </div>
+
+              <div class="mb-3">
+                <label 
+                    for="exampleInputPassword1" 
+                    class="form-label"
+                    >
+                    Número
+                </label>
+                <input 
+                    type="password" 
+                    class="form-control" 
+                    id="exampleInputPassword1"
+                    >
+              </div>
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button 
+            type="button" 
+            class="btn btn-outline-success" 
+            (click)="modal.close('Save click') ; cadastrar()"  
+            >
+            Atualizar
+        </button>
+        </div>
+    </ng-template>
+
+    <!-- XXXXX MODAL CADASTRAR XXXX-->
 
 
-
-    <!-- ===== MODALS ======= -->
+    <!-- ===== MODAL ATUALIZAR ======= -->
     <ng-template #contentAtualizar let-modal>
         <div class="modal-header">
           <h4 class="modal-title" id="modal-basic-title">Atualizar Distribuidora</h4>
@@ -152,85 +253,7 @@
       </ng-template>
 
 
-
-      <ng-template #contentCadastrar let-modal>
-        <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">Atualizar Distribuidora</h4>
-          <button type="button" class=" btn btn-outline-danger close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-                <label 
-                    for="exampleInputEmail1" 
-                    class="form-label"
-                    >
-                    Distribuidora
-                </label>
-                <input 
-                    type="text" 
-                    class="form-control" 
-                    id="exampleInputEmail1"
-                    >
-              </div>
-
-              <div class="mb-3">
-                <label 
-                    for="exampleInputPassword1" 
-                    class="form-label"
-                    >
-                    Endereço
-                </label>
-                <input 
-                    type="password" 
-                    class="form-control" 
-                    id="exampleInputPassword1"
-                    >
-              </div>
-
-              <div class="mb-3">
-                <label 
-                    for="exampleInputPassword1" 
-                    class="form-label"
-                    >
-                    Nome
-                </label>
-                <input 
-                    type="password" 
-                    class="form-control" 
-                    id="exampleInputPassword1"
-                    >
-              </div>
-
-              <div class="mb-3">
-                <label 
-                    for="exampleInputPassword1" 
-                    class="form-label"
-                    >
-                    Número
-                </label>
-                <input 
-                    type="password" 
-                    class="form-control" 
-                    id="exampleInputPassword1"
-                    >
-              </div>
-
-          </form>
-
-        </div>
-        <div class="modal-footer">
-          <button 
-            type="button" 
-            class="btn btn-outline-success" 
-            (click)="modal.close('Save click') ; atualizar(distribuidora.id)"  
-            >
-            Atualizar
-        </button>
-        </div>
-      </ng-template>
+      
       
       
 
