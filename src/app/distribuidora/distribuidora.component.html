@@ -1,50 +1,17 @@
 
-
 <div class="container-table">
-    <div class="table-container">
+    <div class="table-content">
         <h1 class="title">Distribuidoras Gera</h1>
-        <h2 class="cadastro">Cadastrar Distribuidora</h2>
-        <form>
-            <p>
-                Distribuidora: 
-                <input 
-                type="text" 
-                name="distribuidora" 
-                [(ngModel)]="distribuidora.distribuidora"
-                required
-                >
-            </p>
-            <p>
-                Endereço: 
-                <input 
-                type="text" 
-                name="endereco" 
-                [(ngModel)]="distribuidora.endereco"
-                required
-                >
-            </p>
-            <p>
-                Nome: 
-                <input 
-                type="text" 
-                name="nome" 
-                [(ngModel)]="distribuidora.nome"
-                required
-                >
-            </p>
-            <p>
-                Número: 
-                <input 
-                type="text" 
-                name="numero" 
-                [(ngModel)]="distribuidora.numero"
-                required
-                >
-            </p>
-            <button type="button" (click)="openCadastrar(contentCadastrar)">Cadastrar</button>
-        </form>
         
-        <table class="tableDist">
+        <button 
+            type="button"
+            class="btn btn-dark mt-3" 
+            (click)="openCadastrar(contentCadastrar)"
+            >
+            Cadastrar Distribuidora
+        </button>
+        
+        <table class="tableDist mt-3">
             <thead>
                 <tr>
                     <th></th>
@@ -91,12 +58,24 @@
 
     <!-- MODAL CADASTRAR -->
     <ng-template #contentCadastrar let-modal>
+
         <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">Cadastrar Distribuidora</h4>
-          <button type="button" class=" btn btn-outline-danger close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-          </button>
+            <h4 
+                class="modal-title" 
+                id="modal-basic-title"
+                >
+                Cadastrar Distribuidora
+            </h4>
+            <button 
+                type="button" 
+                class=" btn btn-outline-danger close" 
+                aria-label="Close" 
+                (click)="modal.dismiss('Cross click')"
+                >
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
+
         <div class="modal-body">
           <form>
             <div class="mb-3">
@@ -110,10 +89,10 @@
                     type="text" 
                     class="form-control" 
                     id="exampleInputEmail1"
-                    >
-              </div>
+                >
+            </div>
 
-              <div class="mb-3">
+            <div class="mb-3">
                 <label 
                     for="exampleInputPassword1" 
                     class="form-label"
@@ -124,10 +103,10 @@
                     type="password" 
                     class="form-control" 
                     id="exampleInputPassword1"
-                    >
-              </div>
+                >
+            </div>
 
-              <div class="mb-3">
+            <div class="mb-3">
                 <label 
                     for="exampleInputPassword1" 
                     class="form-label"
@@ -138,10 +117,10 @@
                     type="password" 
                     class="form-control" 
                     id="exampleInputPassword1"
-                    >
-              </div>
+                >
+            </div>
 
-              <div class="mb-3">
+            <div class="mb-3">
                 <label 
                     for="exampleInputPassword1" 
                     class="form-label"
@@ -152,8 +131,8 @@
                     type="password" 
                     class="form-control" 
                     id="exampleInputPassword1"
-                    >
-              </div>
+                >
+            </div>
 
           </form>
 
@@ -161,10 +140,10 @@
         <div class="modal-footer">
           <button 
             type="button" 
-            class="btn btn-outline-success" 
+            class="btn btn-success" 
             (click)="modal.close('Save click') ; cadastrar()"  
             >
-            Atualizar
+            Cadastrar
         </button>
         </div>
     </ng-template>
@@ -193,10 +172,10 @@
                     type="text" 
                     class="form-control" 
                     id="exampleInputEmail1"
-                    >
-              </div>
+                >
+            </div>
 
-              <div class="mb-3">
+            <div class="mb-3">
                 <label 
                     for="exampleInputPassword1" 
                     class="form-label"
@@ -207,10 +186,10 @@
                     type="password" 
                     class="form-control" 
                     id="exampleInputPassword1"
-                    >
-              </div>
+                >
+            </div>
 
-              <div class="mb-3">
+            <div class="mb-3">
                 <label 
                     for="exampleInputPassword1" 
                     class="form-label"
@@ -221,10 +200,10 @@
                     type="password" 
                     class="form-control" 
                     id="exampleInputPassword1"
-                    >
-              </div>
+                >
+            </div>
 
-              <div class="mb-3">
+            <div class="mb-3">
                 <label 
                     for="exampleInputPassword1" 
                     class="form-label"
@@ -235,8 +214,8 @@
                     type="password" 
                     class="form-control" 
                     id="exampleInputPassword1"
-                    >
-              </div>
+                >
+            </div>
 
           </form>
 
@@ -248,11 +227,11 @@
             (click)="modal.close('Save click') ; atualizar(distribuidora.id)"  
             >
             Atualizar
-        </button>
+            </button>
         </div>
-      </ng-template>
+    </ng-template>
 
-
+      <!-- XXXXX MODAL ATUALIZAR XXXX-->
       
       
       

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal,  ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { DistribuidoraService } from '../distribuidora.service';
 import { DistribuidoraModel } from './distribuidora.model';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-distribuidora',
@@ -14,11 +15,14 @@ export class DistribuidoraComponent implements OnInit {
   distribuidora: DistribuidoraModel = new DistribuidoraModel();
   distribuidoras: Array<any> = new Array;
 
+  formValue: FormGroup;
+
   closeResult = '';
 
   constructor(
     private distService: DistribuidoraService,
-    private modalService: NgbModal) { }
+    private modalService: NgbModal,
+    private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.listarDistribuidoras();
