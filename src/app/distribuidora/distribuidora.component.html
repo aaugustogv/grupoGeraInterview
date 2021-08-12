@@ -3,13 +3,15 @@
     <div class="table-content">
         <h1 class="heading">Distribuidoras Gera</h1>
         
-        <button 
-            type="button"
-            class="btn btn-outline-success mt-3" 
-            (click)="openCadastrar(contentCadastrar)"
-            >
-            Cadastrar Distribuidora
-        </button>
+
+        <div class="wrapper">
+            <div class="icon cadastrar"
+                (click)="openCadastrar(contentCadastrar)">
+
+                <div class="tooltip">Cadastrar</div>
+                <span><i class="fas fa-plus"></i></span>
+            </div>
+        </div>
         
         <table class="tableDist mt-3">
             <thead>
@@ -54,6 +56,13 @@
                     </td>
                 </tr>
             </tbody>
+            <button 
+            type="button"
+            class="btn btn-outline-success mt-3" 
+            (click)="openCadastrar(contentCadastrar)"
+            >
+            <i class="fas fa-plus"></i>
+        </button>
         </table>
     </div>
 
