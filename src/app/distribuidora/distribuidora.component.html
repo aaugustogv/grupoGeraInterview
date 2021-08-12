@@ -5,7 +5,7 @@
         
         <button 
             type="button"
-            class="btn btn-dark mt-3" 
+            class="btn btn-outline-success mt-3" 
             (click)="openCadastrar(contentCadastrar)"
             >
             Cadastrar Distribuidora
@@ -77,10 +77,10 @@
         </div>
 
         <div class="modal-body">
-          <form>
+          <form [formGroup]="formValue">
             <div class="mb-3">
                 <label 
-                    for="exampleInputEmail1" 
+                    for="inputDistribuidora" 
                     class="form-label"
                     >
                     Distribuidora
@@ -88,49 +88,53 @@
                 <input 
                     type="text" 
                     class="form-control" 
-                    id="exampleInputEmail1"
+                    id="inputDistribuidora"
+                    formControlName="distribuidora"
                 >
             </div>
 
             <div class="mb-3">
                 <label 
-                    for="exampleInputPassword1" 
+                    for="inputEndereco" 
                     class="form-label"
                     >
                     Endereço
                 </label>
                 <input 
-                    type="password" 
+                    type="text" 
                     class="form-control" 
-                    id="exampleInputPassword1"
+                    id="inputEndereco"
+                    formControlName="endereco"
                 >
             </div>
 
             <div class="mb-3">
                 <label 
-                    for="exampleInputPassword1" 
+                    for="inputNome" 
                     class="form-label"
                     >
                     Nome
                 </label>
                 <input 
-                    type="password" 
+                    type="text" 
                     class="form-control" 
-                    id="exampleInputPassword1"
+                    id="inputNome"
+                    formControlName="nome"
                 >
             </div>
 
             <div class="mb-3">
                 <label 
-                    for="exampleInputPassword1" 
+                    for="inputNumero" 
                     class="form-label"
                     >
                     Número
                 </label>
                 <input 
-                    type="password" 
+                    type="text" 
                     class="form-control" 
-                    id="exampleInputPassword1"
+                    id="inputNumero"
+                    formControlName="numero"
                 >
             </div>
 
@@ -138,10 +142,16 @@
 
         </div>
         <div class="modal-footer">
+            <button
+                type="button"
+                class="btn btn-secondary"
+                (click)="modal.close()">
+                Voltar
+            </button>
           <button 
             type="button" 
             class="btn btn-success" 
-            (click)="modal.close('Save click') ; cadastrar()"  
+            (click)="modal.close('Save click') ; postDistribuidoraForm()"  
             >
             Cadastrar
         </button>
@@ -221,12 +231,18 @@
 
         </div>
         <div class="modal-footer">
-          <button 
-            type="button" 
-            class="btn btn-outline-success" 
-            (click)="modal.close('Save click') ; atualizar(distribuidora.id)"  
-            >
-            Atualizar
+            <button
+                type="button"
+                class="btn btn-secondary"
+                (click)="modal.close()">
+                Voltar
+            </button>
+            <button 
+                type="button" 
+                class="btn btn-outline-success" 
+                (click)="modal.close('Save click') ; atualizar(distribuidora.id)"  
+                >
+                Atualizar
             </button>
         </div>
     </ng-template>

@@ -1,9 +1,11 @@
-
 import { Component, OnInit } from '@angular/core';
+
 import { NgbModal,  ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 import { DistribuidoraService } from '../distribuidora.service';
 import { DistribuidoraModel } from './distribuidora.model';
-import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-distribuidora',
@@ -26,6 +28,13 @@ export class DistribuidoraComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarDistribuidoras();
+
+    this.formValue = this.formBuilder.group({
+      distribuidora:[''],
+      endereco:[''],
+      nome:[''],
+      numero:['']
+    })
   }
 
   listarDistribuidoras() {
@@ -40,7 +49,7 @@ export class DistribuidoraComponent implements OnInit {
   }
 
   cadastrar() {
-    //console.log(this.distribuidora)
+    // console.log(this.distribuidora)
     this.distService.cadastrarDistribuidora(this.distribuidora)
     .subscribe(distribuidora => {
 
@@ -76,6 +85,19 @@ export class DistribuidoraComponent implements OnInit {
     });
   }
 
+  //Form 
+  postDistribuidoraForm() {
+
+    this.distribuidora.distribuidora = this.formValue.value.distribuidora;
+    this.distribuidora.endereco = this.formValue.value.endereco;
+    this.distribuidora.nome = this.formValue.value.nome;
+    this.distribuidora.numero = this.formValue.value.numero;
+    
+    this.cadastrar();
+  }
+
+
+  // Modal
   openCadastrar(content: any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;

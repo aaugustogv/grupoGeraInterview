@@ -73,6 +73,13 @@
           "unidadeConsumidoraId": 6
         }
       ]
+    },
+    {
+      "distribuidora": "High",
+      "endereco": "Rua A, PB",
+      "nome": "Unidade 77",
+      "numero": "9886655",
+      "id": 7
     }
   ]
 }
