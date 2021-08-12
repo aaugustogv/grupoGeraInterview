@@ -38,7 +38,7 @@
                         <div class="crud">
                             <button 
                                 class="btn btn-info" 
-                                (click)="openAtualizar(contentAtualizar)"
+                                (click)="openAtualizar(contentAtualizar); onEdit(distribuidora)"
                                 >
                                 Atualizar
                             </button>
@@ -170,10 +170,10 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
+          <form [formGroup]="formValue">
             <div class="mb-3">
                 <label 
-                    for="exampleInputEmail1" 
+                    for="editDistribuidora" 
                     class="form-label"
                     >
                     Distribuidora
@@ -181,49 +181,53 @@
                 <input 
                     type="text" 
                     class="form-control" 
-                    id="exampleInputEmail1"
+                    id="editDistribuidora"
+                    formControlName="distribuidora"
                 >
             </div>
 
             <div class="mb-3">
                 <label 
-                    for="exampleInputPassword1" 
+                    for="editEndereco" 
                     class="form-label"
                     >
                     Endereço
                 </label>
                 <input 
-                    type="password" 
+                    type="text" 
                     class="form-control" 
-                    id="exampleInputPassword1"
+                    id="editEndereco"
+                    formControlName="endereco"
                 >
             </div>
 
             <div class="mb-3">
                 <label 
-                    for="exampleInputPassword1" 
+                    for="editNome" 
                     class="form-label"
                     >
                     Nome
                 </label>
                 <input 
-                    type="password" 
+                    type="text" 
                     class="form-control" 
-                    id="exampleInputPassword1"
+                    id="editNome"
+                    formControlName="nome"
                 >
             </div>
 
             <div class="mb-3">
                 <label 
-                    for="exampleInputPassword1" 
+                    for="editNumero" 
                     class="form-label"
                     >
                     Número
                 </label>
                 <input 
-                    type="password" 
+                    type="text" 
                     class="form-control" 
-                    id="exampleInputPassword1"
+                    id="editNumero"
+                    formControlName="numero"
                 >
             </div>
 
@@ -240,7 +244,7 @@
             <button 
                 type="button" 
                 class="btn btn-outline-success" 
-                (click)="modal.close('Save click') ; atualizar(distribuidora.id)"  
+                (click)="modal.close(); atualizar(distribuidora.id); updateDistribuidoraFrom()"  
                 >
                 Atualizar
             </button>

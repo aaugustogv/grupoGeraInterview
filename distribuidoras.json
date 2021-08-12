@@ -1,18 +1,11 @@
 {
   "distribuidoras": [
     {
-      "distribuidora": "Enel",
-      "endereco": "Quadra 11, SP",
-      "nome": "Unidade 1",
-      "numero": "191491",
-      "id": 1
-    },
-    {
+      "id": 2,
       "distribuidora": "Darknn",
-      "endereco": "Quadra 445, AL",
+      "endereco": "Quadra 445, PB",
       "nome": "Unidade 2",
-      "numero": "984951",
-      "id": 2
+      "numero": "984951"
     },
     {
       "id": 3,

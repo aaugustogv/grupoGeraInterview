@@ -60,8 +60,41 @@ export class DistribuidoraComponent implements OnInit {
       console.log('Error cannot POST',err)
     });
   }
+  //Form 
+  postDistribuidoraForm() {
+
+    this.distribuidora.distribuidora = this.formValue.value.distribuidora;
+    this.distribuidora.endereco = this.formValue.value.endereco;
+    this.distribuidora.nome = this.formValue.value.nome;
+    this.distribuidora.numero = this.formValue.value.numero;
+    
+    this.cadastrar();
+  }
+
+   onEdit(distribuidora: any) {
+    this.distribuidora.id = distribuidora.id;
+    
+    this.formValue.controls['distribuidora'].setValue(distribuidora.distribuidora);
+    this.formValue.controls['endereco'].setValue(distribuidora.endereco);
+    this.formValue.controls['nome'].setValue(distribuidora.nome);
+    this.formValue.controls['numero'].setValue(distribuidora.numero);
+   }
+
+   updateDistribuidoraFrom() {
+    this.distribuidora.distribuidora = this.formValue.value.distribuidora;
+    this.distribuidora.endereco = this.formValue.value.endereco;
+    this.distribuidora.nome = this.formValue.value.nome;
+    this.distribuidora.numero = this.formValue.value.numero;
+
+    this.distService.ataulizarDistribuidora(this.distribuidora, this.distribuidora.id);
+
+    this.atualizar(this.distribuidora.id)
+   }
+
+   // fecha form
 
   atualizar(id:any) {
+
     this.distService.ataulizarDistribuidora(id, this.distribuidora)
     .subscribe(distribuidora => {
 
@@ -85,16 +118,7 @@ export class DistribuidoraComponent implements OnInit {
     });
   }
 
-  //Form 
-  postDistribuidoraForm() {
-
-    this.distribuidora.distribuidora = this.formValue.value.distribuidora;
-    this.distribuidora.endereco = this.formValue.value.endereco;
-    this.distribuidora.nome = this.formValue.value.nome;
-    this.distribuidora.numero = this.formValue.value.numero;
-    
-    this.cadastrar();
-  }
+  
 
 
   // Modal
