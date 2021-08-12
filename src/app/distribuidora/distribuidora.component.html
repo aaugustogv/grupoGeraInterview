@@ -26,16 +26,16 @@
 
             <tbody>
                 <tr *ngFor="let distribuidora of distribuidoras">
-                    <td data-label="id">{{distribuidora.id}}</td>
-                    <td data-label="distribuidora"> {{distribuidora.distribuidora}}</td>
-                    <td data-label="endereco">{{distribuidora.endereco}}</td>
-                    <td data-label="nome"> {{distribuidora.nome}}</td>
-                    <td data-label="nome"> {{distribuidora.numero}}</td>
-                    <td data-label="faturas">
+                    <td data-label="#">{{distribuidora.id}}</td>
+                    <td data-label="Distribuidora"> {{distribuidora.distribuidora}}</td>
+                    <td data-label="Endereco">{{distribuidora.endereco}}</td>
+                    <td data-label="Nome"> {{distribuidora.nome}}</td>
+                    <td data-label="Número"> {{distribuidora.numero}}</td>
+                    <td data-label="Faturas">
                         <a class="btn fatura_open" (click)="openDiv()">Ver Fatura</a> <!--(click)-=> vai aparecer as faturas {{distribuidora.faturas}}-->
                         <div *ngIf="showDiv">{{distribuidora.faturas}}</div>
                     </td>
-                    <td data-label="#">
+                    <td data-label="" class="lastContent" style="border-bottom: 3px solid #f1f1f1;;">
                         <div class="crud">
                             <button 
                                 class="btn btnAtualizar" 
