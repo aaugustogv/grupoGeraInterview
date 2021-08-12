@@ -3,3 +3,131 @@
 
 /*==== HEADER =====*/
 
+.container-table {
+    background-color: #32312f;
+
+    $tablet-mobile: 769px;
+    $mobile: 520px;
+
+    .table-content {
+        padding: 0 10%;
+        margin: 40px auto 0;
+
+        .heading {
+            font-size: 40px;
+            text-align: center;
+            color: #f1f1f1;
+            margin-bottom: 40px;
+        }
+
+        .tableDist {
+            width: 100%;
+            border-collapse: collapse;
+
+            thead {
+                background-color: #ee2828;
+
+                tr th {
+                    font-size: 14px;
+                    font-weight: medium;
+                    letter-spacing: 0.42px;
+                    color: #ffffff;
+                    opacity: 1;
+                    padding: 12px;
+                    vertical-align: top;
+                    // border: 1px solid #dee2e685;
+                }
+            }
+
+            tbody {
+
+                tr td {
+                    font-size: 14px;
+                    letter-spacing: 0.35px;
+                    font-weight: normal;
+                    color: #f1f1f1;
+                    background-color: #3c3f44;
+                    padding: 12px;
+                    text-align: center;
+                    // border: 1px solid #dee2e685;
+                    border-bottom: 1px solid #dee2e685;
+                    width: 45px;
+                }
+
+                .fatura_open {
+                    font-size: 14px;
+                    font-weight: bold;
+                    letter-spacing: 0.65px;
+                    color: #ff1046;
+                    // border: 1px solid #dee2e685;
+                    transition: .5s;
+                }
+                .fatura_open:hover {
+                    background-color: #ff1046;;
+                    color: #f1f1f1;
+                    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                }
+                .btnAtualizar, .btnRemover {
+                    width: 93px;
+                    line-height: 21px;
+                    font-size: 14px;
+                    opacity: 1;
+                }
+                .btnAtualizar {
+                    background-color: #f1f1f1;
+                    color: #ff1046;
+                }
+                .btnRemover {
+                    margin-top: 12px;
+                    background-color: #ff1046;
+                    color: #ffffff;
+                }
+                .btnAtualizar:hover, .btnRemover:hover {
+                    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                } 
+            }
+        }
+
+        @media screen and (max-width: $tablet-mobile) {
+            .tableDist {
+                thead {
+                    display: none;
+                }
+
+                tbody tr td {
+                    display: block;
+                    width: 100%;
+                    text-align: right;
+                    
+                    position: relative;
+                }
+                tr {
+                    margin-bottom: 15px;
+                }
+                td:before {
+                    content: attr(data-label);
+                    position: absolute;
+                    left: 0;
+                    padding-left:15px ;
+                    font-weight: 900;
+                    font-size: 14px;
+                    text-align: center;
+                }
+                
+                .fatura_open{
+                    
+                }
+                .crud {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    .btnAtualizar {
+                        margin-top: 12px;
+                    }
+                }
+            }
+        }
+
+    }
+}

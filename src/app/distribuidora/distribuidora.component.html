@@ -1,7 +1,7 @@
 
 <div class="container-table">
     <div class="table-content">
-        <h1 class="title">Distribuidoras Gera</h1>
+        <h1 class="heading">Distribuidoras Gera</h1>
         
         <button 
             type="button"
@@ -20,7 +20,7 @@
                     <th>Nome</th>
                     <th>Número</th>
                     <th>Fatura</th>
-                    <th>-</th>
+                    <th></th>
                 </tr>
             </thead>
 
@@ -32,19 +32,20 @@
                     <td data-label="nome"> {{distribuidora.nome}}</td>
                     <td data-label="nome"> {{distribuidora.numero}}</td>
                     <td data-label="faturas">
-                        <a href="#" class="btn">Ver Fatura</a> <!--(click)-=> vai aparecer as faturas {{distribuidora.faturas}}-->
+                        <a class="btn fatura_open" (click)="openDiv()">Ver Fatura</a> <!--(click)-=> vai aparecer as faturas {{distribuidora.faturas}}-->
+                        <div *ngIf="showDiv">{{distribuidora.faturas}}</div>
                     </td>
                     <td data-label="#">
                         <div class="crud">
                             <button 
-                                class="btn btn-info" 
+                                class="btn btnAtualizar" 
                                 (click)="openAtualizar(contentAtualizar); onEdit(distribuidora)"
                                 >
                                 Atualizar
                             </button>
 
                             <button 
-                                class="btn btn-light" 
+                                class="btn btnRemover" 
                                 (click)="remover(distribuidora.id)"
                                 >
                                 Remover

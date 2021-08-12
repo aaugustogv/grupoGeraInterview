@@ -20,6 +20,7 @@ export class DistribuidoraComponent implements OnInit {
   formValue: FormGroup;
 
   closeResult = '';
+  
 
   constructor(
     private distService: DistribuidoraService,
@@ -60,6 +61,7 @@ export class DistribuidoraComponent implements OnInit {
       console.log('Error cannot POST',err)
     });
   }
+
   //Form 
   postDistribuidoraForm() {
 
@@ -90,7 +92,6 @@ export class DistribuidoraComponent implements OnInit {
 
     this.atualizar(this.distribuidora.id)
    }
-
    // fecha form
 
   atualizar(id:any) {
@@ -118,9 +119,6 @@ export class DistribuidoraComponent implements OnInit {
     });
   }
 
-  
-
-
   // Modal
   openCadastrar(content: any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -147,4 +145,12 @@ export class DistribuidoraComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
+  //Fatura !!
+  showDiv = false;
+
+  openDiv(): void {
+    this.showDiv = !this.showDiv;
+  }
+
 }

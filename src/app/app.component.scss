@@ -11,6 +11,7 @@ nav {
     background-color: #2c3e50;
 
     $tablet-mobile: 860px;
+    $mobile: 520px;
 
     .logo {
         margin-left: 36px;
@@ -118,6 +119,15 @@ nav {
         }
         #checkbox:checked ~ label #cancel {
             display: block;
+        }
+    }
+    @media screen and (max-width: $mobile) {
+        .logo {
+            font-size: 26px;
+            margin-top: 21px;
+        }
+        a {
+            font-size: 12px;
         }
     }
     /*====== END // Menu Mobile Responsive ========*/
