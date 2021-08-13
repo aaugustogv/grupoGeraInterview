@@ -27,28 +27,24 @@
                 
             </thead>
 
-            <tbody>
-                <tr *ngFor="let distribuidora of distribuidoras">
+            <tbody *ngFor="let distribuidora of distribuidoras">
+                <tr>
                     <td data-label="#">{{distribuidora.id}}</td>
                     <td data-label="Distribuidora"> {{distribuidora.distribuidora}}</td>
                     <td data-label="Endereco">{{distribuidora.endereco}}</td>
                     <td data-label="Nome"> {{distribuidora.nome}}</td>
                     <td data-label="Número"> {{distribuidora.numero}}</td>
-                    <td data-label="Faturas" > <a class="btn fatura_open" (click)="openDiv()">Ver Fatura</a>
-                        <!--(click)-=> vai aparecer as faturas {{distribuidora.faturas}}-->
-                        <div *ngIf="showDiv">
-                            <div class="" *ngFor="let faturas of distribuidora.faturas">
-                                <div class="openFatura" >
-                                    <p>{{faturas.data_de_vencimento}}</p>
-                                    <p>{{faturas.consumo}}</p>
-                                    <p>{{faturas.valor}}</p>
-                                </div>
-                            </div>
-                        </div> <!--Remover o pipe JSON-->
-                        
+                    <td data-label="Faturas" > 
+
+                        <a  class="btn fatura_open" 
+                            (click)="openDiv(distribuidora)"
+                            >
+                            Ver Fatura
+                        </a>
+
                    </td>
                     
-                    <td data-label="" class="lastContent" style="border-bottom: 3px solid #f1f1f1;;">
+                    <td data-label="" class="lastContent">
                         <div class="crud">
                             <button 
                                 class="btn btnAtualizar" 
@@ -66,6 +62,27 @@
                         </div>
                     </td>
                 </tr>
+                <tr *ngIf="distribuidora.aberto" style="border-bottom: 3px solid #f1f1f1">
+                    <td *ngFor="let faturas of distribuidora.faturas" colspan="7">
+                        
+                        <div class="openFatura" >
+                            <span class="invoiceDetails">Fatura:</span>
+                            <p>
+                                <span class="invoice">Vencimento: </span> 
+                                <span class="invoiceData"> {{faturas.data_de_vencimento}}</span>
+                            </p>
+                            <p>
+                                <span class="invoice">Consumo: </span>
+                                <span class="invoiceData"> {{faturas.consumo}}</span>
+                            </p>
+                            <p>
+                                <span class="invoice">Valor: </span> 
+                                <span class="invoiceData"> {{faturas.valor}}</span>
+                            </p>
+                        </div>
+
+                    </td>
+                </tr> 
             </tbody>
             
         </table>
@@ -268,7 +285,6 @@
 
       <!-- XXXXX MODAL ATUALIZAR XXXX-->
       
-      
-      
+
 
 </div>

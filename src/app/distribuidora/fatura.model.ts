@@ -3,4 +3,6 @@ export class FaturaModel {
     consumo: number;
     valor: number;
     unidadeConsumidoraId: number;
+
+    
 }

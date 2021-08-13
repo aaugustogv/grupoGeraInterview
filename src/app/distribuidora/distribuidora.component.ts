@@ -36,7 +36,8 @@ export class DistribuidoraComponent implements OnInit {
       distribuidora:[''],
       endereco:[''],
       nome:[''],
-      numero:['']
+      numero:[''],
+      aberto: false
     })
   }
 
@@ -149,13 +150,20 @@ export class DistribuidoraComponent implements OnInit {
   }
 
   //Fatura !!
-  showDiv = false;
 
-  openDiv(): void {
-    this.showDiv = !this.showDiv;
+
+
+  openDiv(distribuidora): void {
+    let index = this.distribuidoras.findIndex(item => {
+      return distribuidora.id === item.id;
+    });
+    //console.log(index)
+    this.distribuidoras[index].aberto = !this.distribuidoras[index].aberto;
+
+    console.table(this.distribuidoras)
   }
 
-  updateObject(newObject: FaturaModel) {
-    this.distribuidora.fatura[newObject.consumo] = newObject;
-  }
+  // updateObject(newObject: FaturaModel) {
+  //   this.distribuidora.fatura[newObject.consumo] = newObject;
+  // }
 }

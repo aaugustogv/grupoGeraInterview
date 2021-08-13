@@ -7,4 +7,6 @@ export class DistribuidoraModel {
     numero: number;
     id: any;
     fatura: Array<FaturaModel>
+
+    aberto: boolean;
 }

@@ -1,7 +1,23 @@
 {
   "distribuidoras": [
     {
-      "id": 3,
+      "id": 1,
+      "endereco": "Quadra 001, PB",
+      "distribuidora": "Casas Bahia",
+      "nome": "Unidade 3",
+      "numero": "9814987",
+      "faturas": [
+        {
+          "data_de_vencimento": "09/07/2021",
+          "consumo": 258,
+          "valor": 966,
+          "unidadeConsumidoraId": 1
+        }
+      ],
+      "aberto": false
+    },
+    {
+      "id": 2,
       "endereco": "Quadra 77, PB",
       "distribuidora": "MagaLu",
       "nome": "Unidade 3",
@@ -9,14 +25,15 @@
       "faturas": [
         {
           "data_de_vencimento": "05/11/1998",
-          "consumo": 112,
-          "valor": 550,
-          "unidadeConsumidoraId": 3
+          "consumo": 844,
+          "valor": 110,
+          "unidadeConsumidoraId": 2
         }
-      ]
+      ],
+      "aberto": false
     },
     {
-      "id": 4,
+      "id": 3,
       "endereco": "Quadra 001, SE",
       "distribuidora": "Enel",
       "nome": "Unidade 4",
@@ -24,14 +41,15 @@
       "faturas": [
         {
           "data_de_vencimento": "02/10/2001",
-          "consumo": 112,
-          "valor": 550,
-          "unidadeConsumidoraId": 4
+          "consumo": 987,
+          "valor": 254,
+          "unidadeConsumidoraId": 3
         }
-      ]
+      ],
+      "aberto": false
     },
     {
-      "id": 5,
+      "id": 4,
       "endereco": "Quadra 210, RJ",
       "distribuidora": "Havan",
       "nome": "Unidade 5",
@@ -41,12 +59,13 @@
           "data_de_vencimento": "12/01/1998",
           "consumo": 112,
           "valor": 550,
-          "unidadeConsumidoraId": 5
+          "unidadeConsumidoraId": 4
         }
-      ]
+      ],
+      "aberto": false
     },
     {
-      "id": 6,
+      "id": 5,
       "endereco": "Quadra 899, AM",
       "distribuidora": "Light",
       "nome": "Unidade 6",
@@ -54,11 +73,44 @@
       "faturas": [
         {
           "data_de_vencimento": "08/12/1998",
-          "consumo": 112,
-          "valor": 550,
+          "consumo": 788,
+          "valor": 666,
+          "unidadeConsumidoraId": 5
+        }
+      ],
+      "aberto": false
+    },
+    {
+      "id": 6,
+      "endereco": "Quadra 777, PB",
+      "distribuidora": "Youngz",
+      "nome": "Unidade 6",
+      "numero": "8512552",
+      "faturas": [
+        {
+          "data_de_vencimento": "14/01/2020",
+          "consumo": 222,
+          "valor": 658,
           "unidadeConsumidoraId": 6
         }
-      ]
+      ],
+      "aberto": false
+    },
+    {
+      "id": 7,
+      "endereco": "Quadra 88, RN",
+      "distribuidora": "Light",
+      "nome": "Unidade 6",
+      "numero": "8512552",
+      "faturas": [
+        {
+          "data_de_vencimento": "08/12/2011",
+          "consumo": 25,
+          "valor": 788,
+          "unidadeConsumidoraId": 7
+        }
+      ],
+      "aberto": false
     }
   ]
 }
