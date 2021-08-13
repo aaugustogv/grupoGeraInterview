@@ -66,51 +66,24 @@
     },
     {
       "id": 5,
-      "endereco": "Quadra 899, AM",
-      "distribuidora": "Light",
+      "distribuidora": "GrupiO",
+      "endereco": "Quadra 11, PE",
       "nome": "Unidade 6",
-      "numero": "8512552",
-      "faturas": [
-        {
-          "data_de_vencimento": "08/12/1998",
-          "consumo": 788,
-          "valor": 666,
-          "unidadeConsumidoraId": 5
-        }
-      ],
-      "aberto": false
+      "numero": "9912828"
     },
     {
       "id": 6,
-      "endereco": "Quadra 777, PB",
       "distribuidora": "Youngz",
-      "nome": "Unidade 6",
-      "numero": "8512552",
-      "faturas": [
-        {
-          "data_de_vencimento": "14/01/2020",
-          "consumo": 222,
-          "valor": 658,
-          "unidadeConsumidoraId": 6
-        }
-      ],
-      "aberto": false
+      "endereco": "Quadra 777, PB",
+      "nome": "Unidade 7",
+      "numero": "8512552"
     },
     {
       "id": 7,
-      "endereco": "Quadra 88, RN",
       "distribuidora": "Light",
-      "nome": "Unidade 6",
-      "numero": "8512552",
-      "faturas": [
-        {
-          "data_de_vencimento": "08/12/2011",
-          "consumo": 25,
-          "valor": 788,
-          "unidadeConsumidoraId": 7
-        }
-      ],
-      "aberto": false
+      "endereco": "Quadra 88, RN",
+      "nome": "Unidade 8",
+      "numero": "8512552"
     }
   ]
 }

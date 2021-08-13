@@ -5,7 +5,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { DistribuidoraService } from '../distribuidora.service';
 import { DistribuidoraModel } from './distribuidora.model';
-import { FaturaModel } from './fatura.model';
+
 
 
 @Component({
@@ -18,12 +18,10 @@ export class DistribuidoraComponent implements OnInit {
   distribuidora: DistribuidoraModel = new DistribuidoraModel();
   distribuidoras: Array<any> = new Array;
 
-
   formValue: FormGroup;
 
   closeResult = '';
   
-
   constructor(
     private distService: DistribuidoraService,
     private modalService: NgbModal,
@@ -95,7 +93,7 @@ export class DistribuidoraComponent implements OnInit {
 
     this.atualizar(this.distribuidora.id)
    }
-   // fecha form
+  // fecha form
 
   atualizar(id:any) {
 
@@ -121,6 +119,7 @@ export class DistribuidoraComponent implements OnInit {
       console.log('Error cannot DELETE', err)
     });
   }
+
 
   // Modal
   openCadastrar(content: any) {
@@ -151,19 +150,15 @@ export class DistribuidoraComponent implements OnInit {
 
   //Fatura !!
 
-
-
   openDiv(distribuidora): void {
     let index = this.distribuidoras.findIndex(item => {
       return distribuidora.id === item.id;
     });
+
     //console.log(index)
     this.distribuidoras[index].aberto = !this.distribuidoras[index].aberto;
 
     console.table(this.distribuidoras)
   }
 
-  // updateObject(newObject: FaturaModel) {
-  //   this.distribuidora.fatura[newObject.consumo] = newObject;
-  // }
 }
