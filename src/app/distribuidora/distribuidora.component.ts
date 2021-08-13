@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 import { DistribuidoraService } from '../distribuidora.service';
 import { DistribuidoraModel } from './distribuidora.model';
+import { FaturaModel } from '../fatura.model';
 
 
 @Component({
@@ -16,6 +17,9 @@ export class DistribuidoraComponent implements OnInit {
 
   distribuidora: DistribuidoraModel = new DistribuidoraModel();
   distribuidoras: Array<any> = new Array;
+
+  
+  faturas: FaturaModel = new FaturaModel();
 
   formValue: FormGroup;
 

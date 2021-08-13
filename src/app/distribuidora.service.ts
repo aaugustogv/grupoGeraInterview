@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 
+import { NgbModal,  ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { DistribuidoraModel } from './distribuidora/distribuidora.model';
@@ -8,6 +11,7 @@ import { DistribuidoraModel } from './distribuidora/distribuidora.model';
   providedIn: 'root'
 })
 export class DistribuidoraService {
+
 
   constructor(private http: HttpClient) { }
 
@@ -26,7 +30,5 @@ export class DistribuidoraService {
   removerDistribuidora(id: any) {
     return this.http.delete("http://localhost:3000/distribuidoras/".concat(id));
   }
-
-
   
 }

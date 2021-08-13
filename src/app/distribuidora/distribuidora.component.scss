@@ -6,6 +6,7 @@
 .container-table {
     background-color: #22313f;
 
+    $desktop: 1375px;
     $tablet-mobile: 769px;
     $mobile: 520px;
 
@@ -151,9 +152,9 @@
                 .btnAtualizar {
                     background-color: #f1f1f1;
                     color: #ff1046;
+                    margin-right: 12px;
                 }
                 .btnRemover {
-                    margin-top: 12px;
                     background-color: #ff1046;
                     color: #ffffff;
                 }
@@ -201,6 +202,16 @@
                         margin-top: 12px;
                     }
                 }
+            }
+            .tooltip {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: $desktop) {
+            .btnRemover {
+                margin-right: 12px;
+                margin-top: 12px;
             }
         }
 

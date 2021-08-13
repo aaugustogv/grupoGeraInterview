@@ -6,8 +6,8 @@
 
         <div class="wrapper">
             <div class="icon cadastrar"
-                (click)="openCadastrar(contentCadastrar)">
-
+                (click)="openCadastrar(contentCadastrar)"
+                >
                 <div class="tooltip">Cadastrar</div>
                 <span><i class="fas fa-plus"></i></span>
             </div>
@@ -35,7 +35,7 @@
                     <td data-label="Número"> {{distribuidora.numero}}</td>
                     <td data-label="Faturas">
                         <a class="btn fatura_open" (click)="openDiv()">Ver Fatura</a> <!--(click)-=> vai aparecer as faturas {{distribuidora.faturas}}-->
-                        <div *ngIf="showDiv">{{distribuidora.faturas}}</div>
+                        <div *ngIf="showDiv">{{distribuidora.faturas | json}}</div> <!--Remover o pipe JSON-->
                     </td>
                     <td data-label="" class="lastContent" style="border-bottom: 3px solid #f1f1f1;;">
                         <div class="crud">

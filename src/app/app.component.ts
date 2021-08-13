@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { DistribuidoraService } from './distribuidora.service';
+
+import { NgbModal,  ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,13 @@ import { DistribuidoraService } from './distribuidora.service';
 })
 export class AppComponent {
   title = 'appGera';
+
+  closeResult = '';
+  
+  constructor( private modalService: NgbModal) {
+
+  }
+
   
 }
 
