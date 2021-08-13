@@ -6,7 +6,7 @@ Obrigado pela oportunidade, nesse teste pude rever muitos conceitos e aprender a
     Hello there, that is my project :tada:
 </h3>
 
-<img src=".src/assets/desktop.png" align="center">
+<img src="./src/assets/desktop.png" align="center">
 
 
 # And, I made it responsive :tada:
