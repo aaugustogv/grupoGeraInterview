@@ -30,5 +30,6 @@ export class DistribuidoraService {
   removerDistribuidora(id: any) {
     return this.http.delete("http://localhost:3000/distribuidoras/".concat(id));
   }
+
   
 }
