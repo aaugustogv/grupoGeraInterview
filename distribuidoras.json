@@ -4,7 +4,7 @@
       "id": 1,
       "endereco": "Quadra 001, PB",
       "distribuidora": "Casas Bahia",
-      "nome": "Unidade 3",
+      "nome": "Unidade 1",
       "numero": "9814987",
       "faturas": [
         {
@@ -20,7 +20,7 @@
       "id": 2,
       "endereco": "Quadra 77, PB",
       "distribuidora": "MagaLu",
-      "nome": "Unidade 3",
+      "nome": "Unidade 2",
       "numero": "9814987",
       "faturas": [
         {
@@ -36,7 +36,7 @@
       "id": 3,
       "endereco": "Quadra 001, SE",
       "distribuidora": "Enel",
-      "nome": "Unidade 4",
+      "nome": "Unidade 3",
       "numero": "91495184",
       "faturas": [
         {
@@ -52,7 +52,7 @@
       "id": 4,
       "endereco": "Quadra 210, RJ",
       "distribuidora": "Havan",
-      "nome": "Unidade 5",
+      "nome": "Unidade 4",
       "numero": "91988",
       "faturas": [
         {
@@ -68,22 +68,49 @@
       "id": 5,
       "distribuidora": "GrupiO",
       "endereco": "Quadra 11, PE",
-      "nome": "Unidade 6",
-      "numero": "9912828"
+      "nome": "Unidade 5",
+      "numero": "9912828",
+      "faturas": [
+        {
+          "data_de_vencimento": "31/01/2015",
+          "consumo": 873,
+          "valor": 99,
+          "unidadeConsumidoraId": 5
+        }
+      ],
+      "aberto": false
     },
     {
       "id": 6,
       "distribuidora": "Youngz",
       "endereco": "Quadra 777, PB",
-      "nome": "Unidade 7",
-      "numero": "8512552"
+      "nome": "Unidade 6",
+      "numero": "8512552",
+      "faturas": [
+        {
+          "data_de_vencimento": "04/01/2006",
+          "consumo": 463,
+          "valor": 557,
+          "unidadeConsumidoraId": 6
+        }
+      ],
+      "aberto": false
     },
     {
       "id": 7,
       "distribuidora": "Light",
       "endereco": "Quadra 88, RN",
-      "nome": "Unidade 8",
-      "numero": "8512552"
+      "nome": "Unidade 7",
+      "numero": "8512552",
+      "faturas": [
+        {
+          "data_de_vencimento": "02/09/2008",
+          "consumo": 820,
+          "valor": 98,
+          "unidadeConsumidoraId": 7
+        }
+      ],
+      "aberto": false
     }
   ]
 }
