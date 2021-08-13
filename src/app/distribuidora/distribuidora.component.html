@@ -21,9 +21,10 @@
                     <th>Endereço</th>
                     <th>Nome</th>
                     <th>Número</th>
-                    <th>Fatura</th>
+                    <th>Faturas</th>
                     <th></th>
                 </tr>
+                
             </thead>
 
             <tbody>
@@ -33,16 +34,20 @@
                     <td data-label="Endereco">{{distribuidora.endereco}}</td>
                     <td data-label="Nome"> {{distribuidora.nome}}</td>
                     <td data-label="Número"> {{distribuidora.numero}}</td>
-                    <td data-label="Faturas">
-                        <a class="btn fatura_open" (click)="openDiv()">Ver Fatura</a> <!--(click)-=> vai aparecer as faturas {{distribuidora.faturas}}-->
-                        <div *ngIf="showDiv" >
+                    <td data-label="Faturas" > <a class="btn fatura_open" (click)="openDiv()">Ver Fatura</a>
+                        <!--(click)-=> vai aparecer as faturas {{distribuidora.faturas}}-->
+                        <div *ngIf="showDiv">
                             <div class="" *ngFor="let faturas of distribuidora.faturas">
-                                <p>{{faturas.data_de_vencimento}}</p>
-                                <p>{{faturas.consumo}}</p>
-                                <p>{{faturas.valor}}</p>
+                                <div class="openFatura" >
+                                    <p>{{faturas.data_de_vencimento}}</p>
+                                    <p>{{faturas.consumo}}</p>
+                                    <p>{{faturas.valor}}</p>
+                                </div>
                             </div>
                         </div> <!--Remover o pipe JSON-->
-                    </td>
+                        
+                   </td>
+                    
                     <td data-label="" class="lastContent" style="border-bottom: 3px solid #f1f1f1;;">
                         <div class="crud">
                             <button 
